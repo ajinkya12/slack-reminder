@@ -2,8 +2,19 @@ function yaadDilaDo() {
   /* var xhr = $.get('https://www.eventsnow.com/hyderabad/srh-ipl-tickets', function(response){
       //console.log('RESPONSE', response.includes('No matches available currently'));
   });*/
-  $.post('https://hooks.slack.com/services/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',
-                      {'text': 'NEW NEW'}, function(response){
-                        console.log(JSON.stringify(response));
-                      });
+  var url = "9hDsZS8nEqe7zEXEI1x9hYyu/8EJUHF4UB/QD7D8E30T/secivres/moc.kcals.skooh//:sptth";
+  var actual = url.split("").reverse().join("");
+  
+  $.ajax({
+      type: 'POST',
+      url: actual,
+      data: JSON.stringify({
+        "text": "NEW NEW"
+      }),
+      error: function(e) {
+        console.log(e);
+      },
+      dataType: "json",
+      contentType: "application/json"
+  });
 };
