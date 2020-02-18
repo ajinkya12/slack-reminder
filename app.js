@@ -7,15 +7,13 @@ function yaadDilaDo() {
   var token = "RB7726vi8Rj0bsi0JTDxArc8-846348849659-6649444843-bxox";
   var actualToken = token.split("").reverse().join("");
 
+  var text = "NEW NEW";
   $.ajax({
       type: 'POST',
       url: actual,
-      data: JSON.stringify({
-        "text": "NEW NEW"
+      data: 'payload=' + JSON.stringify({
+        "text": text
       }),
-      headers: {
-        "Authorization": "Bearer " + actualToken
-      },
       error: function(e) {
         console.log(e);
       },
