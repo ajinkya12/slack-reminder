@@ -1,10 +1,17 @@
 function yaadDilaDo() {
-  /* var xhr = $.get('https://www.eventsnow.com/hyderabad/srh-ipl-tickets', function(response){
-      //console.log('RESPONSE', response.includes('No matches available currently'));
-  });*/
+  $.get('https://www.eventsnow.com/hyderabad/srh-ipl-tickets', function(response){
+      var tickets = response.includes('No matches available currently');
+      console.log("available :: " + tickets);
+      if(tickets) {
+        sendMessage();
+      }
+  });
+};
+
+function sendMessage() {
   var url = "EYvs5bLcCHZbNdCTzgRPBWHj/Z36E927UB/QD7D8E30T/secivres/moc.kcals.skooh//:sptth";
   var actual = url.split("").reverse().join("");
-  var text = "NEW NEW";
+  var text = "Ticket ticket";
   $.ajax({
       type: 'POST',
       url: actual,
@@ -13,4 +20,4 @@ function yaadDilaDo() {
       }),
       dataType: "json"
   });
-};
+}
