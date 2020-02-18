@@ -14,7 +14,7 @@ function yaadDilaDo() {
         "text": "NEW NEW"
       }),
       headers: {
-        "Authorization": "Basic " + actualToken
+        "Authorization": "Bearer " + actualToken
       },
       error: function(e) {
         console.log(e);
